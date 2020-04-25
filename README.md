@@ -40,7 +40,7 @@ ant -buildfile src/build.xml run -Dargs='3 input1.txt input2.txt input3.txt outp
 
 The program spawns N threads and each thread reads input from its respective input file. The data read by each thread is stored in its own data structure and in a shared data structure. The thread's own data structure is sorted using the Bubble Sort algorithm while the shared Results data structure is sorted using the Merge Sort algorithm.
 
-To implement this kind of behaviour, the State pattern is used for the program's design. Depending on the context, a corresponding strategy is selected for implementation. If a thread's data structure needs to be sorted, then Bubble sort is used and if the Results data structure needs to be sorted then Merge Sort is used.
+To implement this kind of behaviour, the Strategy pattern is used for the program's design. Depending on the context, a corresponding strategy is selected for implementation. If a thread's data structure needs to be sorted, then Bubble sort is used and if the Results data structure needs to be sorted then Merge Sort is used.
 
 The data structure used (both for Threads and Results) is the Array List. ArrayList is chosen as the data structure to be used for this program. It has O(n) time complexity for adding/removing elements. Although Vector is synchronized, an ArrayList grows by 50% whereas a Vector doubles its size. Explicit synchronization can be provided for an ArrayList whenever required and therefore reduces the overhead caused by Vectors. An ArrayList's elements can be accessed directly using get and set methods. An ArrayList can also hold duplicate values which is a requirement for the assignment.
 
